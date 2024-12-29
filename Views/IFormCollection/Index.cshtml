@@ -1,0 +1,76 @@
+﻿@model MVCDemo.Models.StudentModel;
+
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>IFormCollections</h1>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-6">
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Form</h5>
+
+                        <!-- General Form Elements -->
+                        @using (Html.BeginForm("Submit", "IFormCollection", FormMethod.Post))
+                        {
+                            <div class="row mb-3">
+                                <label for="Name" class="col-4 col-form-label">Enter Name :</label>
+                                <div class="col">
+                                    @Html.TextBoxFor(m => m.StudentName, new { @class = "form-control"})
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="Age" class="col-4 col-form-label">Enter Age :</label>
+                                <div class="col">
+                                    @Html.TextBoxFor(m => m.Age, new { @class = "form-control"})
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col text-center">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        }
+                        <!-- End General Form Elements -->
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Data</h5>
+
+                        <!-- Table with stripped rows -->
+                        <table class="table datatable">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Age</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>@ViewBag.StudentName</td>
+                                    <td>@ViewBag.Age</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- End Table with stripped rows -->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main><!-- End #main -->

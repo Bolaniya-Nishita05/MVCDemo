@@ -1,0 +1,97 @@
+﻿@model MVCDemo.Models.CustomerModel
+
+<main id="main" class="main">
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title fs-4 text-center fw-bold fst-italic text-decoration-underline">CUSTOMER DETAILS FORM</h1>
+
+            <!-- General Form Elements -->
+            <form>
+                <div class="row mb-3">
+                    <div class="col-sm-10">
+                        <input type="hidden" class="form-control" asp-for="CustomerID">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputDate" class="col-sm-2 col-form-label"><span class="text-danger">* </span>CustomerName</label>
+                    <div class="col-sm-10">
+                        <input asp-for="CustomerName" type="text" class="form-control">
+                        <span asp-validation-for="CustomerName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label"><span class="text-danger">* </span>HomeAddress</label>
+                    <div class="col-sm-10">
+                        <textarea asp-for="HomeAddress" type="text" class="form-control"></textarea>
+                        <span asp-validation-for="HomeAddress" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label"><span class="text-danger">* </span>Email</label>
+                    <div class="col-sm-10">
+                        <input asp-for="Email" type="email" class="form-control">
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label"><span class="text-danger">* </span>MobileNo</label>
+                    <div class="col-sm-10">
+                        <input asp-for="MobileNo" type="text" class="form-control">
+                        <span asp-validation-for="MobileNo" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputDate" class="col-sm-2 col-form-label"><span class="text-danger">* </span>GSTNo</label>
+                    <div class="col-sm-10">
+                        <input asp-for="GSTNo" type="text" class="form-control">
+                        <span asp-validation-for="GSTNo" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label"><span class="text-danger">* </span>CityName</label>
+                    <div class="col-sm-10">
+                        <input asp-for="CityName" type="text" class="form-control">
+                        <span asp-validation-for="CityName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label"><span class="text-danger">* </span>PinCode</label>
+                    <div class="col-sm-10">
+                        <input asp-for="PinCode" type="text" class="form-control">
+                        <span asp-validation-for="PinCode" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label"><span class="text-danger">* </span>NetAmount</label>
+                    <div class="col-sm-10">
+                        <input asp-for="NetAmount" type="text" class="form-control">
+                        <span asp-validation-for="NetAmount" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label"><span class="text-danger">* </span>UserName</label>
+                    <div class="col-sm-10">
+                        <select class="form-control" asp-for="UserID" asp-items="@(new SelectList(ViewBag.UserList, "UserID", "Username"))">
+                            <option value="">Select User</option>
+                        </select>
+                        <span asp-validation-for="UserID" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row m-5 mb-3 text-center">
+                    <div class="col-sm-10">
+                        <button type="submit" asp-controller="Customer" asp-action="onSubmit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+
+            </form><!-- End General Form Elements -->
+
+        </div>
+    </div>
+</main>
+
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+}

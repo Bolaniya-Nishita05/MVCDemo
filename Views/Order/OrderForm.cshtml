@@ -1,0 +1,97 @@
+﻿@model MVCDemo.Models.OrderModel
+
+<main id="main" class="main">
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title fs-4 text-center fw-bold fst-italic text-decoration-underline">ORDER DETAILS FORM</h1>
+
+            <!-- General Form Elements -->
+            <form>
+                <div class="row mb-3">
+                    <div class="col-sm-10">
+                        <input type="hidden" class="form-control" asp-for="OrderID">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputDate" class="col-sm-2 col-form-label"><span class="text-danger">* </span>OrderDate</label>
+                    <div class="col-sm-10">
+                        <input asp-for="OrderDate" type="date" class="form-control">
+                        <span asp-validation-for="OrderDate" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label"><span class="text-danger">* </span>CustomerName</label>
+                    <div class="col-sm-10">
+                        @* <select asp-for="CustomerID" class="form-select" aria-label="Default select example">
+                            <option value="">Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select> *@
+
+                        <select class="form-control" asp-for="CustomerID" asp-items="@(new SelectList(ViewBag.CustomerList, "CustomerID", "CustomerName"))">
+                            <option value="">Select Customer</option>
+                        </select>
+                        <span asp-validation-for="CustomerID" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label"><span class="text-danger">* </span>PaymentMode</label>
+                    <div class="col-sm-10">
+                        <input asp-for="PaymentMode" type="text" class="form-control">
+                        <span asp-validation-for="PaymentMode" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label"><span class="text-danger">* </span>TotalAmount</label>
+                    <div class="col-sm-10">
+                        <input asp-for="TotalAmount" type="text" class="form-control">
+                        <span asp-validation-for="TotalAmount" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label"><span class="text-danger">* </span>ShippingAddress</label>
+                    <div class="col-sm-10">
+                        <textarea asp-for="ShippingAddress" type="text" class="form-control"></textarea>
+                        <span asp-validation-for="ShippingAddress" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label"><span class="text-danger">* </span>UserName</label>
+                    <div class="col-sm-10">
+                        @* <select asp-for="UserID" class="form-select" aria-label="Default select example">
+                            <option value="">Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select> *@
+
+                        <select class="form-control" asp-for="UserID">
+                            <option value="">Select User</option>
+                            @foreach (var user in ViewBag.UserList)
+                            {
+                                <option value="@user.UserID">@user.Username</option>
+                            }
+                        </select>
+                        <span asp-validation-for="UserID" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row m-5 mb-3 text-center">
+                    <div class="col-sm-10">
+                        <button type="submit" asp-controller="Order" asp-action="onSubmit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+
+            </form><!-- End General Form Elements -->
+
+        </div>
+    </div>
+</main>
+
+
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+}
