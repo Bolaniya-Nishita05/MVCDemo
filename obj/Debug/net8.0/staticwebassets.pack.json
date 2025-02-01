@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\Dell Inspiron 3505\\OneDrive\\Desktop\\N DU PROGRAMS\\MVCDemo\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MVCDemo.bundle.scp.css",
-      "PackagePath": "staticwebassets\\MVCDemo.bundle.scp.css"
+      "PackagePath": "staticwebassets\\MVCDemo.5a36e6wbpq.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\Dell Inspiron 3505\\OneDrive\\Desktop\\N DU PROGRAMS\\MVCDemo\\wwwroot\\css\\style.css",
@@ -2151,6 +2151,10 @@
     {
       "Id": "C:\\Users\\Dell Inspiron 3505\\OneDrive\\Desktop\\N DU PROGRAMS\\MVCDemo\\wwwroot\\vendor\\tinymce\\tinymce.min.js",
       "PackagePath": "staticwebassets\\vendor\\tinymce\\tinymce.min.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MVCDemo.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MVCDemo.Microsoft.AspNetCore.StaticWebAssets.props",

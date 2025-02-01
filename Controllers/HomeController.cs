@@ -1,7 +1,10 @@
+using DocumentFormat.OpenXml.InkML;
+using DocumentFormat.OpenXml.Spreadsheet;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using MVCDemo.Models;
 using System.Diagnostics;
+using System.Diagnostics.Metrics;
 
 namespace MVCDemo.Controllers
 {
@@ -29,6 +32,13 @@ namespace MVCDemo.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+        public static List<object> countries = new List<object>
+            {
+                new { name = "United States", code = "US" },
+                new { name = "Canada", code = "CA" },
+                new { name = "India", code = "IND" }
+            };
+
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -42,6 +52,39 @@ namespace MVCDemo.Controllers
         {
             return View();
         }
+
+        public IActionResult DemoTable()
+        {
+            return View();
+        }
+
+        public IActionResult AjaxDemo()
+        {
+            var countries = GetCountries();
+            return View(countries);
+        }
+
+        [HttpGet]
+        public JsonResult GetCountries()
+        {
+            return Json(countries);
+        }
+
+        [HttpPost]
+        public JsonResult AddCountry(string name, string code)
+        {
+            countries.Add(new { name = name, code = code });
+            return Json(new { success = true });
+        }
+
+
+        [HttpDelete]
+        public JsonResult DeleteCountry(string name)
+        {
+            // Deletion logic here
+            return Json(new { success = true });
+        }
+
 
         public IActionResult CreateCookie()
         {

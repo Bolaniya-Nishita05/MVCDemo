@@ -109,11 +109,11 @@ namespace MVCDemo.Controllers
             }
 
             dashboardData.NavigationLinks = new List<QuickLinksModel> {
-        new QuickLinksModel {ActionMethodName = "Index", ControllerName="Dashboard", LinkName="Dashboard" },
-        new QuickLinksModel {ActionMethodName = "Index", ControllerName="Country", LinkName="Country" },
-        new QuickLinksModel {ActionMethodName = "Index", ControllerName="State", LinkName="State" },
-        new QuickLinksModel {ActionMethodName = "Index", ControllerName="City", LinkName="City" }
-    };
+                new QuickLinksModel {ActionMethodName = "Index", ControllerName="Dashboard", LinkName="Dashboard" },
+                new QuickLinksModel {ActionMethodName = "Index", ControllerName="Country", LinkName="Country" },
+                new QuickLinksModel {ActionMethodName = "Index", ControllerName="State", LinkName="State" },
+                new QuickLinksModel {ActionMethodName = "Index", ControllerName="City", LinkName="City" }
+            };
 
             var model = new DashboardModel
             {

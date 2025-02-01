@@ -1,0 +1,150 @@
+﻿<main id="main" class="main">
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title fs-4 text-center fw-bold fst-italic text-decoration-underline">AJAX DEMO</h1>
+
+            <!-- General Form Elements -->
+            <form>
+                <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label"><span class="text-danger">* </span>CountryName</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control name">
+                        <span class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputEmail" class="col-sm-2 col-form-label"><span class="text-danger">* </span>CountryCode</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control code">
+                        <span class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row m-5 mb-3 text-center">
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary submit">Submit</button>
+                    </div>
+                </div>
+
+            </form><!-- End General Form Elements -->
+
+        </div>
+    </div>
+
+
+    <table class="table table-hover table-header-fixed">
+        <thead>
+            <tr>
+                <th scope="col">Country Name</th>
+                <th scope="col">Country Code</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody id="ajaxdemotable">
+        </tbody>
+    </table>
+</main>
+
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            loadCountries();
+
+            $(".submit").click(function (e) {
+                e.preventDefault(); // Prevent form submission
+
+                if (!$("form").valid()) {
+                    alert("Please fill out the required fields.");
+                    return;
+                }
+
+                var name = $(".name").val();
+                var code = $(".code").val();
+
+                var url = name && code ? '/Home/CreateCountry' : '/Home/UpdateCountry';
+                var data = { countryName: name, countryCode: code };
+
+                $.ajax({
+                    url: url,
+                    method: 'POST',
+                    data: data,
+                    success: function () {
+                        alert("Country saved successfully!");
+                        loadCountries();
+                        $(".name, .code").val("");
+                    },
+                    error: function () {
+                        alert("Failed to save country. Please try again.");
+                    }
+                });
+            });
+
+            $(document).on('click', '.btn-outline-success', function () {
+                var name = $(this).closest('tr').find('td:nth-child(1)').text();
+                var code = $(this).closest('tr').find('td:nth-child(2)').text();
+                editCountry(name, code);
+            });
+
+            $(document).on('click', '.btn-outline-danger', function () {
+                var name = $(this).closest('tr').find('td:nth-child(1)').text();
+                deleteCountry(name);
+            });
+        });
+
+        function loadCountries() {
+            $.ajax({
+                url: '/Home/GetCountries',
+                method: 'GET',
+                success: function (data) {
+                    var ajaxdemotable = $("#ajaxdemotable");
+                    ajaxdemotable.empty();
+                    data.forEach(country => {
+                        ajaxdemotable.append(`
+                            <tr>
+                                <td>${country.name}</td>
+                                <td>${country.code}</td>
+                                <td>
+                                    <button class="btn btn-outline-success btn-xs">
+                                        <i class="bi bi-pencil-fill"></i>
+                                    </button>
+                                    <button class="btn btn-outline-danger btn-xs">
+                                        <i class="bi bi-x"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        `);
+                    });
+                },
+                error: function () {
+                    alert("Error loading countries");
+                }
+            });
+        }
+
+        function editCountry(name, code) {
+            $(".name").val(name);
+            $(".code").val(code);
+        }
+
+        function deleteCountry(name) {
+            if (confirm("Are you sure you want to delete?")) {
+                $.ajax({
+                    url: `/Home/DeleteCountry?name=${name}`,
+                    method: 'DELETE',
+                    success: function () {
+                        alert("Country deleted successfully!");
+                        loadCountries();
+                    },
+                    error: function () {
+                        alert("Failed to delete country.");
+                    }
+                });
+            }
+        }
+
+    </script>
+}

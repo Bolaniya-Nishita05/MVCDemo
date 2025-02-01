@@ -1,0 +1,89 @@
+﻿<main id="main" class="main">
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title fs-4 text-center fw-bold fst-italic text-decoration-underline">JQUERY DEMO</h1>
+
+            <!-- General Form Elements -->
+            <form>
+                <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label"><span class="text-danger">* </span>CountryName</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control name">
+                        <span class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputEmail" class="col-sm-2 col-form-label"><span class="text-danger">* </span>CountryCode</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control code">
+                        <span class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row m-5 mb-3 text-center">
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary submit">Submit</button>
+                    </div>
+                </div>
+
+            </form><!-- End General Form Elements -->
+
+        </div>
+    </div>
+
+
+    <table class="table table-hover table-header-fixed">
+        <thead>
+            <tr>
+                <th scope="col">Country Name</th>
+                <th scope="col">Country Code</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody id="demotable">
+        </tbody>
+    </table>
+</main>
+
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".submit").click(function (e) {
+                e.preventDefault(); // Prevent form submission
+
+                // Get values from input fields
+                var name = $(".name").val();
+                var code = $(".code").val();
+
+
+                // Create a new table row
+                var newRow = `
+                <tr>
+                    <td>${name}</td>
+                    <td>${code}</td>
+                    <td>
+                        <a class="btn btn-outline-success btn-xs" asp-controller="Country" asp-action="CountryAddEdit" asp-route-CountryID="CountryID">
+                            <i class="bi bi-pencil-fill"></i>
+                        </a>
+                        <button type="button" class="btn btn-outline-danger btn-xs" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal" data-countryid="CountryID">
+                            <i class="bi bi-x"></i>
+                        </button>
+                    </td>
+                </tr>
+                `;
+
+                // Append the new row to the table body
+                $("#demotable").append(newRow);
+
+                // Clear the input fields
+                $(".name").val("");
+                $(".code").val("");
+            });
+        });
+    </script>
+
+}
