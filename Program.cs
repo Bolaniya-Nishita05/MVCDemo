@@ -17,11 +17,16 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
+
+app.UseExceptionHandler("/Home/Error");
+app.UseStatusCodePagesWithReExecute("/Home/Error", "?statusCode={0}");
+
 // Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Home/Error");
+    app.UseDeveloperExceptionPage();
 }
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 

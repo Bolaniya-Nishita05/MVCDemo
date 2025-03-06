@@ -1,5 +1,4 @@
 C:\Users\Dell Inspiron 3505\OneDrive\Desktop\N DU PROGRAMS\MVCDemo\bin\Debug\net8.0\appsettings.Development.json
-C:\Users\Dell Inspiron 3505\OneDrive\Desktop\N DU PROGRAMS\MVCDemo\bin\Debug\net8.0\appsettings.json
 C:\Users\Dell Inspiron 3505\OneDrive\Desktop\N DU PROGRAMS\MVCDemo\bin\Debug\net8.0\MVCDemo.staticwebassets.runtime.json
 C:\Users\Dell Inspiron 3505\OneDrive\Desktop\N DU PROGRAMS\MVCDemo\bin\Debug\net8.0\MVCDemo.exe
 C:\Users\Dell Inspiron 3505\OneDrive\Desktop\N DU PROGRAMS\MVCDemo\bin\Debug\net8.0\MVCDemo.deps.json
@@ -56,3 +55,4 @@ C:\Users\Dell Inspiron 3505\OneDrive\Desktop\N DU PROGRAMS\MVCDemo\bin\Debug\net
 C:\Users\Dell Inspiron 3505\OneDrive\Desktop\N DU PROGRAMS\MVCDemo\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Users\Dell Inspiron 3505\OneDrive\Desktop\N DU PROGRAMS\MVCDemo\obj\Debug\net8.0\staticwebassets\msbuild.MVCDemo.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
 C:\Users\Dell Inspiron 3505\OneDrive\Desktop\N DU PROGRAMS\MVCDemo\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Dell Inspiron 3505\OneDrive\Desktop\N DU PROGRAMS\MVCDemo\bin\Debug\net8.0\appsettings.json

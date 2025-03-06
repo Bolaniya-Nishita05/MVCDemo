@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Dell Inspiron 3505\\OneDrive\\Desktop\\N DU PROGRAMS\\MVCDemo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{721516B9-3A01-40A8-AB79-92A996C08031}|MVCDemo.csproj|c:\\users\\dell inspiron 3505\\onedrive\\desktop\\n du programs\\mvcdemo\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{721516B9-3A01-40A8-AB79-92A996C08031}|MVCDemo.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{721516B9-3A01-40A8-AB79-92A996C08031}|MVCDemo.csproj|c:\\users\\dell inspiron 3505\\onedrive\\desktop\\n du programs\\mvcdemo\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{721516B9-3A01-40A8-AB79-92A996C08031}|MVCDemo.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{721516B9-3A01-40A8-AB79-92A996C08031}|MVCDemo.csproj|c:\\users\\dell inspiron 3505\\onedrive\\desktop\\n du programs\\mvcdemo\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{721516B9-3A01-40A8-AB79-92A996C08031}|MVCDemo.csproj|solutionrelative:views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{721516B9-3A01-40A8-AB79-92A996C08031}|MVCDemo.csproj|c:\\users\\dell inspiron 3505\\onedrive\\desktop\\n du programs\\mvcdemo\\views\\shared\\_layout_login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{721516B9-3A01-40A8-AB79-92A996C08031}|MVCDemo.csproj|solutionrelative:views\\shared\\_layout_login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{721516B9-3A01-40A8-AB79-92A996C08031}|MVCDemo.csproj|c:\\users\\dell inspiron 3505\\onedrive\\desktop\\n du programs\\mvcdemo\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{721516B9-3A01-40A8-AB79-92A996C08031}|MVCDemo.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{721516B9-3A01-40A8-AB79-92A996C08031}|MVCDemo.csproj|c:\\users\\dell inspiron 3505\\onedrive\\desktop\\n du programs\\mvcdemo\\views\\home\\ajaxdemo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{721516B9-3A01-40A8-AB79-92A996C08031}|MVCDemo.csproj|solutionrelative:views\\home\\ajaxdemo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{721516B9-3A01-40A8-AB79-92A996C08031}|MVCDemo.csproj|c:\\users\\dell inspiron 3505\\onedrive\\desktop\\n du programs\\mvcdemo\\controllers\\citycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{721516B9-3A01-40A8-AB79-92A996C08031}|MVCDemo.csproj|solutionrelative:controllers\\citycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,66 +27,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Dell Inspiron 3505\\OneDrive\\Desktop\\N DU PROGRAMS\\MVCDemo\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Dell Inspiron 3505\\OneDrive\\Desktop\\N DU PROGRAMS\\MVCDemo\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAACIAAAAAAAAAAAAiwCkAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-25T16:24:17.476Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_Layout_Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\Dell Inspiron 3505\\OneDrive\\Desktop\\N DU PROGRAMS\\MVCDemo\\Views\\Shared\\_Layout_Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout_Login.cshtml",
-              "ToolTip": "C:\\Users\\Dell Inspiron 3505\\OneDrive\\Desktop\\N DU PROGRAMS\\MVCDemo\\Views\\Shared\\_Layout_Login.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout_Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-25T16:20:52.982Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Dell Inspiron 3505\\OneDrive\\Desktop\\N DU PROGRAMS\\MVCDemo\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Dell Inspiron 3505\\OneDrive\\Desktop\\N DU PROGRAMS\\MVCDemo\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-25T16:18:58.649Z",
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Dell Inspiron 3505\\OneDrive\\Desktop\\N DU PROGRAMS\\MVCDemo\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Dell Inspiron 3505\\OneDrive\\Desktop\\N DU PROGRAMS\\MVCDemo\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAswEUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T15:36:38.068Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Dell Inspiron 3505\\OneDrive\\Desktop\\N DU PROGRAMS\\MVCDemo\\Views\\Dashboard\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Dashboard\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Dell Inspiron 3505\\OneDrive\\Desktop\\N DU PROGRAMS\\MVCDemo\\Views\\Dashboard\\Index.cshtml",
-              "RelativeToolTip": "Views\\Dashboard\\Index.cshtml",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAEQAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-25T15:58:19.345Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AjaxDemo.cshtml",
-              "DocumentMoniker": "C:\\Users\\Dell Inspiron 3505\\OneDrive\\Desktop\\N DU PROGRAMS\\MVCDemo\\Views\\Home\\AjaxDemo.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\AjaxDemo.cshtml",
-              "ToolTip": "C:\\Users\\Dell Inspiron 3505\\OneDrive\\Desktop\\N DU PROGRAMS\\MVCDemo\\Views\\Home\\AjaxDemo.cshtml",
-              "RelativeToolTip": "Views\\Home\\AjaxDemo.cshtml",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAAAGgAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-21T03:28:06.659Z"
+              "Title": "CityController.cs",
+              "DocumentMoniker": "C:\\Users\\Dell Inspiron 3505\\OneDrive\\Desktop\\N DU PROGRAMS\\MVCDemo\\Controllers\\CityController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CityController.cs",
+              "ToolTip": "C:\\Users\\Dell Inspiron 3505\\OneDrive\\Desktop\\N DU PROGRAMS\\MVCDemo\\Controllers\\CityController.cs",
+              "RelativeToolTip": "Controllers\\CityController.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAowJ0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T07:07:35.787Z"
             }
           ]
         }
