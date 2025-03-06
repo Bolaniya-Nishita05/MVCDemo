@@ -185,7 +185,7 @@ namespace MVCDemo.Controllers
 
         public IActionResult SendEmail()
         {
-            _emailSender.SendEmail("bmbolaniya@gmail.com", "Test Subject", "This is a test email.");
+            _emailSender.SendEmail("abc@gmail.com", "Test Subject", "This is a test email.");
             return Content("Email sent successfully.");
         }
 
